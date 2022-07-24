@@ -4,7 +4,7 @@
 
 常用容器的图录：
 
-![java容器图录](../.gitbook/assets/image.png)
+![java容器图录](<../.gitbook/assets/image (1).png>)
 
 ## **Collection 和 Collections 有什么区别？**
 
@@ -23,7 +23,7 @@
 
 ## **说一下 HashMap 的实现原理？**
 
-HashMap概述：HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。&#x20;
+HashMap概述：HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。
 
 HashMap的数据结构：在java编程语言中，最基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所有的数据结构都可以用这两个基本结构来构造的，HashMap也不例外。HashMap实际上是一个“链表散列”的数据结构，即<mark style="color:orange;">数组和链表的结合体</mark>。
 
@@ -63,6 +63,6 @@ Java中的Iterator功能比较简单，并且只能单向移动：
 
 Iterator是Java迭代器最简单的实现，为List设计的ListIterator具有更多的功能，它可以从两个方向遍历List，也可以从List中插入和删除元素。
 
-## &#x20;
+##
 
-\
+\\
