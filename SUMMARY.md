@@ -3,7 +3,7 @@
 * [Java面经](README.md)
   * [Java 基础](java-mian-jing/java-ji-chu.md)
   * [容器](java-mian-jing/rong-qi.md)
-  * [Lock锁](java-mian-jing/lock-suo.md)
+  * [多线程](readme/duo-xian-cheng.md)
   * [JVM](java-mian-jing/jvm.md)
 * [Redis面经](redis-mian-jing.md)
 * [Kafka面经](kafka-mian-jing.md)
