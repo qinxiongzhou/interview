@@ -1,7 +1,7 @@
 # Table of contents
 
 * [概述](README.md)
-* [Java面经](<README (1).md>)
+* [Java面经](java-mian-jing.md)
   * [Java 基础](java-mian-jing/java-ji-chu.md)
   * [容器](java-mian-jing/rong-qi.md)
   * [多线程](ava-mian-jing/duo-xian-cheng.md)
