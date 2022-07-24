@@ -1,5 +1,8 @@
 {
-    "plugins": [
-        "pageview-count"
-    ]
+    "plugins": ["3-ba"],
+    "pluginsConfig": {
+        "3-ba": {
+            "token": "1a3d48f8abd120e092d6c0ebfac7c016"
+        }
+    }
 }
