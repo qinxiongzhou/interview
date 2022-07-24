@@ -54,7 +54,7 @@ System.out.println(c1.equals(c2)); // false
 
 输出结果出乎我们的意料，竟然是 false？这是怎么回事，看了 equals 源码就知道了，源码如下：
 
-```
+```java
 public boolean equals(Object obj) {    
     return (this == obj);
 }
@@ -64,7 +64,7 @@ public boolean equals(Object obj) {
 
 那问题来了，两个相同值的 String 对象，为什么返回的是 true？代码如下：
 
-```
+```java
 String s1 = new String("老王");
 String s2 = new String("老王");
 System.out.println(s1.equals(s2)); // true
@@ -72,7 +72,7 @@ System.out.println(s1.equals(s2)); // true
 
 同样的，当我们进入 String 的 equals 方法，找到了答案，代码如下：
 
-```
+```java
 public boolean equals(Object anObject) {    
     if (this == anObject) {        
         return true;    
