@@ -16,7 +16,7 @@
 * 基本类型：比较的是值是否相同；
 * 引用类型：比较的是引用是否相同；
 
-```
+```java
 String x = "string";
 String y = "string";
 String z = new String("string");
@@ -35,7 +35,7 @@ equals 本质上就是 ==，只不过 String 和 Integer 等重写了 equals 方
 首先来看默认情况下 equals 比较一个有相同值的对象，代码如下：\
 
 
-```
+```java
 class Cat {    
     public Cat(String name) {        
         this.name = name;    
