@@ -1,22 +1,55 @@
-# 常用数据结构
+# Java 基础
 
-## StringBuilder、StringBuffer、String
+## JDK和JRE有什么区别
 
-String 和 StringBuffer、StringBuilder 的区别在于 <mark style="color:orange;">String 声明的是不可变的对象</mark>，每次操作都会生成新的 String 对象，然后将指针指向新的 String 对象，而 <mark style="color:orange;">StringBuffer、StringBuilder 可以在原有对象的基础上进行操作</mark>，所以在经常改变字符串内容的情况下最好不要使用 String。
+* JDK：Java Development Kit 的简称，java 开发工具包，提供了 java 的开发环境和运行环境。
+* JRE：Java Runtime Environment 的简称，java 运行环境，为 java 的运行提供了所需环境。
 
-StringBuffer 和 StringBuilder 最大的区别在于，<mark style="color:orange;">StringBuffer 是线程安全的</mark>，<mark style="color:orange;">而 StringBuilder 是非线程安全的</mark>，但 <mark style="color:orange;">StringBuilder 的性能却高于 StringBuffe</mark>r，所以在单线程环境下推荐使用 StringBuilder，多线程环境下推荐使用 StringBuffer。
+具体来说 JDK 其实包含了 JRE，同时还包含了编译 java 源码的编译器 javac，还包含了很多 java 程序调试和分析的工具。简单来说：如果你需要运行 java 程序，只需安装 JRE 就可以了，如果你需要编写 java 程序，需要安装 JDK。
 
-## HashMap
+## **== 和 equals 的区别是什么**
 
-HashMap概述：HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是它不保证该顺序恒久不变。&#x20;
+**== 解读**
 
-HashMap的数据结构：在java编程语言中，最基本的结构就是两种，一个是数组，另外一个是模拟指针（引用），所有的数据结构都可以用这两个基本结构来构造的，HashMap也不例外。HashMap实际上是一个“链表散列”的数据结构，即<mark style="color:orange;">数组和链表的结合体</mark>。
+对于基本类型和引用类型 == 的作用效果是不同的，如下所示：
 
-当我们往Hashmap中put元素时,首先根据key的hashcode重新计算hash值,根绝hash值得到这个元素在数组中的位置(下标),如果该数组在该位置上已经存放了其他元素,那么在这个位置上的元素将以链表的形式存放,新加入的放在链头,最先加入的放入链尾.如果数组中该位置没有元素,就直接将该元素放到数组的该位置上。
+* 基本类型：比较的是值是否相同；
+* 引用类型：比较的是引用是否相同；
 
-需要注意<mark style="color:orange;">Jdk 1.8中对HashMap的实现做了优化,当链表中的节点数据超过八个之后,该链表会转为红黑树来提高查询效率,从原来的O(n)到O(logn)</mark>
+```
+String x = "string";
+String y = "string";
+String z = new String("string");
+System.out.println(x==y); // true
+System.out.println(x==z); // false
+System.out.println(x.equals(y)); // true
+System.out.println(x.equals(z)); // true
+```
 
-## ConcurrentHashMap
+代码解读：因为 x 和 y 指向的是同一个引用，所以 == 也是 true，而 new String()方法则重写开辟了内存空间，所以 == 结果为 false，而 equals 比较的一直是值，所以结果都为 true。
 
-## TreeMap
+**equals 解读**
+
+equals 本质上就是 ==，只不过 String 和 Integer 等重写了 equals 方法，把它变成了值比较。看下面的代码就明白了。
+
+首先来看默认情况下 equals 比较一个有相同值的对象，代码如下：\
+
+
+```
+class Cat {    
+    public Cat(String name) {        
+        this.name = name;    
+    }    
+    private String name;    
+    public String getName() {
+        return name;    
+    }    
+    public void setName(String name) {
+        this.name = name;    
+    }
+}
+Cat c1 = new Cat("王磊");
+Cat c2 = new Cat("王磊");
+System.out.println(c1.equals(c2)); // false
+```
 
