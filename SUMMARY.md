@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Java面经](README.md)
-  * [Java 基础](java-mian-jing/chang-yong-shu-ju-jie-gou.md)
+  * [Java 基础](java-mian-jing/java-ji-chu.md)
   * [Thread线程](java-mian-jing/thread-xian-cheng.md)
   * [Lock锁](java-mian-jing/lock-suo.md)
   * [JVM](java-mian-jing/jvm.md)
